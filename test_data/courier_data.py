@@ -8,7 +8,6 @@ def generate_login():
 
 
 class CourierData:
-
     body_create_courier = {
         "login": generate_login(),
         "password": "password123",
@@ -39,6 +38,3 @@ class CourierData:
         "login": "login123",
         "password": "123"
     }
-
-
-

@@ -13,9 +13,7 @@ class TestCreateOrder:
         with allure.step('Отправить POST запрос на /orders'):
             payload = copy.deepcopy(OrderData.body_create_order)
             payload['color'] = color
-            print(payload)
             response = orders_api.create_order(payload)
-            print(response.text)
             result = response.json()
         with allure.step('Проверить статус-код и тело ответа'):
             assert response.status_code == 201
